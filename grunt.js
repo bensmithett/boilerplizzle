@@ -25,9 +25,12 @@ module.exports = function(grunt) {
     },
     watch: {
       files: ['<config:coffee.app.src>'],
-      tasks: 'coffee'
+      tasks: 'coffee growl:coffee'
     },
-    uglify: {},
+    
+    server: {
+      base: './build'
+    },
 
     coffee: {
       app: {
@@ -35,12 +38,20 @@ module.exports = function(grunt) {
         dest: 'build/js'
       }
     },
+
+    growl : {
+      coffee : {
+        title   : 'CoffeeScript',
+        message : 'Compiled!'
+      }
+    }
   });
 
   // Load npm tasks
   grunt.loadNpmTasks('grunt-coffee');
+  grunt.loadNpmTasks('grunt-growl');
 
   // Default task.
-  grunt.registerTask('default', 'lint qunit concat min');
+  grunt.registerTask('default', 'server watch');
 
 };
