@@ -1,0 +1,16 @@
+{
+  "name": "boilerplizzle",
+  "version": "0.1.0",
+  "description": "A starting point for new projects",
+  "author": {
+    "name": "Ben Smithett",
+    "email": "ben@bensmithett.com",
+    "url": "http://bensmithett.com"
+  },
+  "devDependencies": {
+    "grunt": "0.3.x",
+    "grunt-coffee": "0.0.6",
+    "grunt-growl": "0.1.x",
+    "grunt-requirejs": "0.2.x"
+  }
+}
