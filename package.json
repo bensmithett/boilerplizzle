@@ -10,6 +10,7 @@
   "devDependencies": {
     "grunt": "0.3.x",
     "grunt-coffee": "0.0.6",
+    "grunt-compass": "0.3.x",
     "grunt-growl": "0.1.x",
     "grunt-requirejs": "0.2.x"
   }
