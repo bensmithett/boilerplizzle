@@ -25,8 +25,8 @@ module.exports = function(grunt) {
     },
     watch: {
       coffee: {
-        files: ['<config:coffee.app.src>'],
-        tasks: ['coffee', 'growl:coffee']
+        files: ['coffee/**/*.coffee'],
+        tasks: ['coffee:compile', 'growl:coffee']
       },
       compass: {
         files: ['sass/**/*.sass'],
@@ -39,9 +39,10 @@ module.exports = function(grunt) {
     },
 
     coffee: {
-      app: {
-        src: ['coffee/**/*.coffee'],
-        dest: 'build/js'
+      compile: {
+        files: {
+          'build/js/app.js': 'coffee/**/*.coffee'
+        }
       }
     },
 
@@ -73,7 +74,7 @@ module.exports = function(grunt) {
   });
 
   // Load npm tasks
-  grunt.loadNpmTasks('grunt-coffee');
+  grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-growl');
   grunt.loadNpmTasks('grunt-compass');
   grunt.loadNpmTasks('grunt-requirejs');
