@@ -20,7 +20,7 @@ You instantly get the bare minimum you need to build something awesome:
 - a server
 - a sensible folder structure
 - automatic Compass & CoffeeScript compilation
-- The [h5bp](http://html5boilerplate.com/) `index.html`
+- `index.html` from [h5bp](http://html5boilerplate.com/) 
 - TODO: jQuery
 - TODO: Modernizr
 - TODO: Jasmine + Testem + Travis CI
