@@ -11,7 +11,7 @@ too much hassle I can't even remember what I was going to build in the
 first place oooo is that a cat gif?
 
 ## What you get
-Boilerplizzle gives you the bare minimum you need to get started with the tools you love using on a bigger projects.
+Boilerplizzle gives you a flexible bare minimum you need to get started with the tools you love using on a bigger projects.
 - a static local server
 - a sensible folder structure
 - automatic Compass & CoffeeScript compilation
