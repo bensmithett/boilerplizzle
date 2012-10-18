@@ -19,6 +19,7 @@ Boilerplizzle gives you the bare minimum you need to get started with the tools 
 - TODO: jQuery
 - TODO: Modernizr
 - TODO: Jasmine + Testem + Travis CI
+- TODO: A build task to gift wrap a minified, production-ready copy of your project.
 
 No, you don't get Bootstrap.
 
