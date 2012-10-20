@@ -15,6 +15,10 @@ module.exports = function(grunt) {
       dist: {
         src: ['<banner:meta.banner>', '<file_strip_banner:lib/<%= pkg.name %>.js>'],
         dest: 'dist/<%= pkg.name %>.js'
+      },
+      head: {
+        src: ['build/js/lib/modernizr.min.js', 'build/js/load.js'],
+        dest: 'build/js/head.js'
       }
     },
     min: {
@@ -26,7 +30,7 @@ module.exports = function(grunt) {
     watch: {
       coffee: {
         files: ['coffee/**/*.coffee'],
-        tasks: ['coffee:compile', 'growl:coffee']
+        tasks: ['coffee:compile', 'concat:head', 'growl:coffee']
       },
       compass: {
         files: ['sass/**/*.sass'],
@@ -41,7 +45,8 @@ module.exports = function(grunt) {
     coffee: {
       compile: {
         files: {
-          'build/js/app.js': 'coffee/**/*.coffee'
+          'build/js/load.js': 'coffee/load.coffee',
+          'build/js/app.js': ['coffee/app.coffee']
         }
       }
     },
