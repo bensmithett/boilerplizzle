@@ -1,27 +1,24 @@
 # Boilerplizzle
 
-Boilerplizzle is a fast starting point for new projects.
-
-Because deciding to whip up a quick experiment & realising you need to
-get the latest HTML5 Boilerplate & strip out the bits you don't need 
-then get the latest jQuery & Modernizr then
-set up Compass & CoffeeScript & LiveReload & Jasmine & .gitignore 
-& put everything into a nice folder structure & oh god I'm bored this is
-too much hassle I can't even remember what I was going to build in the
-first place oooo is that a cat gif?
+Boilerplizzle is a starting point for small or experimental projects that gives you the tools 
+you're used to from bigger projects then gets out of your way.
 
 ## What you get
-Boilerplizzle gives you a flexible bare minimum you need to get started with the tools you love using on a bigger projects.
-- a static local server
-- a sensible folder structure
-- automatic Compass & CoffeeScript compilation
-- `index.html` from [h5bp](http://html5boilerplate.com/) 
-- TODO: jQuery
-- TODO: Modernizr
+- a local server
+- file watching & automatic [Compass](http://coffeescript.org/) & [CoffeeScript](http://coffeescript.org/) compilation
+- a folder structure that doesn't suck
+- [h5bp](http://html5boilerplate.com/)'s `index.html` with all the junk stripped out
+- [jQuery](http://jquery.com/), [Modernizr](http://modernizr.com/) & [Lo-Dash](http://lodash.com/)
+- [Normalize.css](http://necolas.github.com/normalize.css/)
 - TODO: Jasmine + Testem + Travis CI
 - TODO: A build task to gift wrap a minified, production-ready copy of your project.
 
-No, you don't get Bootstrap.
+No, you don't get Bootstrap. 
+
+Don't need all of these tools, or need some others that aren't included? Go nuts!
+Boilerplizzle's defaults are designed to be easy to overwrite, add to or delete.
+
+Even better, [fork it and make it yours!](https://github.com/bensmithett/boilerplizzle/fork_select)
 
 ## Super complicated installation instructions
 
@@ -34,6 +31,8 @@ No, you don't get Bootstrap.
 - Clone or download this repo & `cd` into it
 - `npm install`
 - `grunt`
-- Make something awesome
+
+A blank canvas is waiting for you at [localhost:8000](http://localhost:8000),
+so stop reading this right now & go do something awesome to `index.html`, `app.coffee` or `screen.sass`!
 
 
