@@ -1,3 +1,27 @@
+echo '
+             _.--""-.                      
+         .--"        `.                    
+        /              \                   
+       :            .   ;                  
+       ;            :   |                  
+      ::    .       ::  :                  
+      ::. .:`       `:.  ;                 
+      ;::::` __.._   ::. :                 
+     /  __.g$$$$$$""gp.._`-._       Boilerplizzle.       
+   .`.g$$$$$$$$$P   T$-.:""-/      /        
+   `-.T$$P`T$$P`     ");|.-`      /         
+       "T         .-  ,-`         
+        l _,     /    ;\.-"\               
+        d$$bp.       /  ;   `-.            
+        T"--"T     .`   : \_, :            
+         Y""-  _.-"  `  ;  )` ;"-._        
+        .:b..gdP    /  / .`  /     "-.     
+       / `T$$P"   .` .`    .`         `.   
+    _.-`.  \  \    .`   .-"             \  
+  .`     "-.)_ `.-"  .-"                 ; 
+ /            "-._.-"                    : 
+'
+
 # Get JS libs
 mkdir -p build/js/lib
 wget -O build/js/lib/jquery.min.js http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js
