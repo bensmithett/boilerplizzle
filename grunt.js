@@ -42,13 +42,13 @@ module.exports = function(grunt) {
 
     compass: {
       dev: {
-        src: 'sass',
+        src: 'sass/screen.sass',
         dest: 'build/css',
         linecomments: true,
         outputstyle: 'expanded'
       },
       prod: {
-        src: 'sass',
+        src: 'sass/screen.sass',
         dest: 'build/css',
         outputstyle: 'compressed',
         linecomments: false

@@ -1,4 +1,5 @@
 .sass-cache/
 build/css/
 build/js/
+sass/lib/
 node_modules/
