@@ -7,18 +7,16 @@ you're used to from bigger projects then gets out of your way.
 - a local server
 - file watching & automatic [Compass](http://coffeescript.org/) & [CoffeeScript](http://coffeescript.org/) compilation
 - a folder structure that doesn't suck
-- [h5bp](http://html5boilerplate.com/)'s `index.html` with all the junk stripped out
+- [h5bp](http://html5boilerplate.com/)'s `index.html` stripped down to the bare essentials
 - [jQuery](http://jquery.com/), [Modernizr](http://modernizr.com/) & [Lo-Dash](http://lodash.com/)
 - [Normalize.css](http://necolas.github.com/normalize.css/)
 - TODO: Jasmine + Testem + Travis CI
 - TODO: A build task to gift wrap a minified, production-ready copy of your project.
 
-No, you don't get Bootstrap. 
+Nope, no Bootstrap.
 
 Don't need all of these tools or want others that aren't included? Go nuts!
-Boilerplizzle's defaults are designed to be easy to overwrite, add to or delete.
-
-[Fork it and make it yours!](https://github.com/bensmithett/boilerplizzle/fork_select)
+Boilerplizzle's defaults are designed to be easy to add to, overwrite or delete.
 
 ## Super complicated installation instructions
 
@@ -29,7 +27,7 @@ Boilerplizzle's defaults are designed to be easy to overwrite, add to or delete.
 
 ### Get started
 - Clone or download this repo & `cd` into it
-- `./install.sh`
+- `./gimme.sh`
 - `grunt`
 
 A blank canvas is waiting for you at [localhost:8000](http://localhost:8000),
