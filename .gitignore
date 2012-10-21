@@ -1,6 +1,10 @@
 .sass-cache/
 build/css/
-build/js/
+build/js/*.js
+build/js/lib/jquery.min.js
+build/js/lib/lodash.min.js
+build/js/lib/modernizr.min.js
 node_modules/
 sass/lib/
+spec/helpers/jasmine-jquery.js
 spec/js/

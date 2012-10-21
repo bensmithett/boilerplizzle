@@ -30,7 +30,7 @@ wget -O build/js/lib/modernizr.min.js http://cdnjs.cloudflare.com/ajax/libs/mode
 
 # Get jasmine-jquery
 mkdir -p spec/helpers/
-wget -O spec/helpers/jasmine-jquery-1.3.1.js http://cloud.github.com/downloads/velesin/jasmine-jquery/jasmine-jquery-1.3.1.js
+wget -O spec/helpers/jasmine-jquery.js http://cloud.github.com/downloads/velesin/jasmine-jquery/jasmine-jquery-1.3.1.js
 
 # Get Normalize
 mkdir -p sass/lib
