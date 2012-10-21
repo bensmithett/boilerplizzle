@@ -22,6 +22,8 @@ Boilerplizzle's defaults are designed to be easy to add to, overwrite or delete.
 - [node](http://nodejs.org/): `brew install node` or just download the installer
 - [Compass](http://compass-style.org/install/): `gem install compass`
 - [grunt](http://gruntjs.com/): `sudo npm install -g grunt`
+- **optional** [Testem](https://github.com/airportyh/testem) `npm install -g testem` if you want to test your JS with [Jasmine](http://pivotal.github.com/jasmine/)
+- **optional** [PhantomJS](http://phantomjs.org/download.html) for browser-less Jasmine tests
 
 ### Get started
 - Clone or download this repo & `cd` into it

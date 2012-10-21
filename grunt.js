@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     },
     watch: {
       coffee: {
-        files: ['coffee/**/*.coffee'],
+        files: ['coffee/**/*.coffee', 'spec/**/*.coffee'],
         tasks: ['coffee:compile', 'concat:head', 'growl:coffee']
       },
       compass: {
@@ -35,7 +35,8 @@ module.exports = function(grunt) {
       compile: {
         files: {
           'build/js/load.js': 'coffee/load.coffee',
-          'build/js/app.js': ['coffee/app.coffee']
+          'build/js/app.js': ['coffee/app.coffee'],
+          'spec/js/*.js': 'spec/**/*.coffee'
         }
       }
     },
