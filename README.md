@@ -13,8 +13,6 @@ you're used to from bigger projects then gets out of your way.
 - TODO: Jasmine + Testem + Travis CI
 - TODO: A build task to gift wrap a minified, production-ready copy of your project.
 
-Nope, no Bootstrap.
-
 Don't need all of these tools or want others that aren't included? Go nuts!
 Boilerplizzle's defaults are designed to be easy to add to, overwrite or delete.
 
