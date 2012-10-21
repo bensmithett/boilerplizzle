@@ -20,7 +20,7 @@ Boilerplizzle's defaults are designed to be easy to add to, overwrite or delete.
 
 ## Super complicated installation instructions
 
-### Install dependencies (if you don't already have them)
+### Install dependencies (you probably already have these if you're a serious pro webmaster)
 - [node](http://nodejs.org/): `brew install node` or just download the installer
 - [Compass](http://compass-style.org/install/): `gem install compass`
 - [grunt](http://gruntjs.com/): `sudo npm install -g grunt`
