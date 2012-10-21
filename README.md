@@ -15,10 +15,10 @@ you're used to from bigger projects then gets out of your way.
 
 No, you don't get Bootstrap. 
 
-Don't need all of these tools, or need some others that aren't included? Go nuts!
+Don't need all of these tools or want others that aren't included? Go nuts!
 Boilerplizzle's defaults are designed to be easy to overwrite, add to or delete.
 
-Even better, [fork it and make it yours!](https://github.com/bensmithett/boilerplizzle/fork_select)
+[Fork it and make it yours!](https://github.com/bensmithett/boilerplizzle/fork_select)
 
 ## Super complicated installation instructions
 
@@ -29,10 +29,8 @@ Even better, [fork it and make it yours!](https://github.com/bensmithett/boilerp
 
 ### Get started
 - Clone or download this repo & `cd` into it
-- `npm install`
+- `./install.sh`
 - `grunt`
 
 A blank canvas is waiting for you at [localhost:8000](http://localhost:8000),
 so stop reading this right now & go do something awesome to `index.html`, `app.coffee` or `screen.sass`!
-
-
