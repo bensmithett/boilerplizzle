@@ -10,7 +10,6 @@ you're used to from bigger projects then gets out of your way.
 - [h5bp](http://html5boilerplate.com/)'s `index.html` stripped down to the bare essentials
 - [jQuery](http://jquery.com/), [Modernizr](http://modernizr.com/) & [Lo-Dash](http://lodash.com/)
 - [Normalize.css](http://necolas.github.com/normalize.css/)
-- Wicked fast [yepnope](http://yepnopejs.com/) script loading
 - TODO: Jasmine + Testem + Travis CI
 - TODO: A build task to gift wrap a minified, production-ready copy of your project.
 
