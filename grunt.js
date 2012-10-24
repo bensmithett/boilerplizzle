@@ -3,19 +3,13 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    pkg: '<json:package.json>',
     concat: {
       head: {
         src: ['public/js/vendor/modernizr*.js', 'tmp/load.js'],
         dest: 'public/js/head.js'
       }
     },
-    min: {
-      dist: {
-        src: ['<banner:meta.banner>', '<config:concat.dist.dest>'],
-        dest: 'dist/<%= pkg.name %>.min.js'
-      }
-    },
+
     watch: {
       coffee: {
         files: ['coffee/**/*.coffee', 'spec/**/*.coffee'],
