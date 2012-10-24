@@ -81,6 +81,6 @@ module.exports = function(grunt) {
 
   // Default task.
   grunt.registerTask('compile', 'coffee:compile concat:head clean:tmp growl:coffee compass:dev growl:compass')
-  grunt.registerTask('default', 'server watch');
+  grunt.registerTask('default', 'compile server watch');
 
 };
