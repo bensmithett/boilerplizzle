@@ -1,21 +1,19 @@
 # Boilerplizzle
 
-Boilerplizzle is a starting point for small or experimental projects that gives you the tools 
+Boilerplizzle is a flexible starting point for small or experimental projects that gives you the tools 
 you're used to from bigger projects then gets out of your way.
 
 ## What you get
 - a local server
 - file watching & automatic [Compass](http://coffeescript.org/) & [CoffeeScript](http://coffeescript.org/) compilation
-- a folder structure that doesn't suck
 - [h5bp](http://html5boilerplate.com/)'s `index.html` stripped down to the bare essentials
 - [jQuery](http://jquery.com/), [Modernizr](http://modernizr.com/) & [Lo-Dash](http://lodash.com/)
 - [Normalize.css](http://necolas.github.com/normalize.css/)
 - [Jasmine](http://pivotal.github.com/jasmine/), [jasmine-jquery](https://github.com/velesin/jasmine-jquery) & [Testem](https://github.com/airportyh/testem)
-- COMING SOON: Travis CI
-- COMING SOON: A build task to gift wrap a minified, production-ready copy of your project.
+- A build task to gift wrap a minified, production-ready copy of your project.
 
-Don't need all of these tools or want others that aren't included? Go nuts!
-Boilerplizzle's defaults are designed to be easy to add to, overwrite or destroy.
+Boilerplizzle is designed to be customised. You can easily add more libraries & tools or delete
+the defaults.
 
 ## Super complicated installation instructions
 
@@ -42,5 +40,5 @@ If you don't already have them, install Testem & PhantomJS:
 
 Then...
 - `grunt`
-- In a new terminal tab, `testem`
+- In a new terminal window, `testem`
 - Write your specs in CoffeeScript in the `spec` directory, save & watch the magic happen.
