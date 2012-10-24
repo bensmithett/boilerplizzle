@@ -17,12 +17,9 @@ the defaults.
 
 ## Super complicated installation instructions
 
-### Install dependencies (you probably already have these if you're a serious pro webmaster)
-- [node](http://nodejs.org/): `brew install node` or just download the installer
-- [Compass](http://compass-style.org/install/): `gem install compass`
-- [grunt](http://gruntjs.com/): `sudo npm install -g grunt`
+Boilerplizzle requires [node](http://nodejs.org/), [Compass](http://compass-style.org/install/) & [grunt](http://gruntjs.com/)
+(you probably already have these if you're a serious pro webmaster, see [Installing Dependencies](#installing-dependencies) if you don't).
 
-### Get started
 - Clone or download this repo & `cd` into it
 - `npm install`
 - `grunt`
@@ -48,3 +45,9 @@ Just `grunt build` then your `public/` folder is ready to ship to the informatio
 
 `grunt compile` makes the `public/` folder development-y again.
 
+## Installing dependencies
+Boilerplizzle requires node, Compass and grunt.
+
+- [node](http://nodejs.org/): `brew install node` or just download the installer
+- [Compass](http://compass-style.org/install/): `gem install compass`
+- [grunt](http://gruntjs.com/): `sudo npm install -g grunt`
