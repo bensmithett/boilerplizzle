@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     watch: {
       coffee: {
         files: ['coffee/**/*.coffee', 'spec/**/*.coffee'],
-        tasks: ['coffee:compile', 'concat:head', 'growl:coffee']
+        tasks: ['coffee:compile', 'concat:head', 'clean:tmp', 'growl:coffee']
       },
       compass: {
         files: ['sass/**/*.sass'],
