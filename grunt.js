@@ -10,6 +10,17 @@ module.exports = function(grunt) {
       }
     },
 
+    min: {
+      head: {
+        src: ['public/js/vendor/modernizr*.js', 'tmp/load.js'],
+        dest: 'public/js/head.js'
+      },
+      app: {
+        src: 'public/js/app.js',
+        dest: 'public/js/app.js'
+      }
+    },
+
     watch: {
       coffee: {
         files: ['coffee/**/*.coffee', 'spec/**/*.coffee'],
@@ -62,6 +73,10 @@ module.exports = function(grunt) {
       compass: {
         title: 'Compass',
         message: 'Compiled!'
+      },
+      build: {
+        title: 'Build complete',
+        message: 'The public/ folder is ready to deploy!'
       }
     }
   });
@@ -74,7 +89,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-requirejs');
 
   // Default task.
-  grunt.registerTask('compile', 'coffee:compile concat:head clean:tmp growl:coffee compass:dev growl:compass')
+  grunt.registerTask('compile', 'coffee:compile concat:head clean:tmp growl:coffee compass:dev growl:compass');
   grunt.registerTask('default', 'compile server watch');
-
+  grunt.registerTask('build', 'coffee:compile min:head min:app clean:tmp compass:prod growl:build');
 };
