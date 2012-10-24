@@ -42,3 +42,9 @@ Then...
 - `grunt`
 - In a new terminal window, `testem`
 - Write your specs in CoffeeScript in the `spec` directory, save & watch the magic happen.
+
+## Building for production
+Just `grunt build` then your `public/` folder is ready to ship to the information superhighway.
+
+`grunt compile` makes the `public/` folder development-y again.
+
