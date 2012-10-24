@@ -5,12 +5,12 @@ src_files:
   - spec/helpers/jasmine-jquery-1.3.1.js
 
   # JS libraries used in the app
-  - build/js/lib/modernizr.min.js
-  - build/js/lib/jquery.min.js
-  - build/js/lib/lodash.min.js
+  - public/js/lib/modernizr.min.js
+  - public/js/lib/jquery.min.js
+  - public/js/lib/lodash.min.js
 
   # App JS
-  - build/js/app.js
+  - public/js/app.js
 
   # Specs
   - spec/js/**/*.js
