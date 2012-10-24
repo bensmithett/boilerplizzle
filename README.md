@@ -26,7 +26,7 @@ Boilerplizzle's defaults are designed to be easy to add to, overwrite or destroy
 
 ### Get started
 - Clone or download this repo & `cd` into it
-- `./gimme.sh`
+- `npm install`
 - `grunt`
 
 A blank canvas awaits you at [localhost:8000](http://localhost:8000),
