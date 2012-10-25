@@ -33,6 +33,9 @@ then
   unzip tmp-boilerplizzle.zip
   rm tmp-boilerplizzle.zip
   mv bensmithett-boilerplizzle* $foldername
+  cd $foldername
+  npm install
+  echo "Your new project is set up! Run 'grunt' to fire up the server & Compass/Coffee compilation."
 else
   echo "Alrighty, see you next time then."
 fi
