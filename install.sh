@@ -27,7 +27,8 @@ echo '
 read -p "Creating a folder for your new project, give it a name: " foldername
 
 read -p "This will download boilerplizzle into '"$foldername"'', then run 'npm install'. That cool? [Yn] "
-if [[ ! $REPLY =~ ^[Nn]$ ]] then
+if [[ ! $REPLY =~ ^[Nn]$ ]]
+then
   wget -O tmp-boilerplizzle.zip https://github.com/bensmithett/boilerplizzle/zipball/master/
   unzip tmp-boilerplizzle.zip
   rm tmp-boilerplizzle.zip
