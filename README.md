@@ -4,8 +4,8 @@ Boilerplizzle is a flexible starting point for small or experimental projects th
 you're used to from bigger projects then gets out of your way.
 
 ## What you get
-- a local server
-- file watching & automatic [Compass](http://coffeescript.org/) & [CoffeeScript](http://coffeescript.org/) compilation
+- a local preview server
+- automatic [Compass](http://coffeescript.org/) & [CoffeeScript](http://coffeescript.org/) compilation
 - [h5bp](http://html5boilerplate.com/)'s `index.html` stripped down to the bare essentials
 - [jQuery](http://jquery.com/), [Modernizr](http://modernizr.com/) & [Lo-Dash](http://lodash.com/)
 - [Normalize.css](http://necolas.github.com/normalize.css/)
