@@ -52,16 +52,12 @@ module.exports = function(grunt) {
 
     compass: {
       dev: {
-        src: 'sass/screen.sass',
-        dest: 'public/css',
-        linecomments: true,
-        outputstyle: 'expanded'
+        environment: 'development',
+        config: 'compass.rb'
       },
       prod: {
-        src: 'sass/screen.sass',
-        dest: 'public/css',
-        outputstyle: 'compressed',
-        linecomments: false
+        environment: 'production',
+        config: 'compass.rb'
       }
     },
 
@@ -91,5 +87,5 @@ module.exports = function(grunt) {
   // Default task.
   grunt.registerTask('compile', 'coffee:compile concat:head clean:tmp growl:coffee compass:dev growl:compass');
   grunt.registerTask('default', 'compile server watch');
-  grunt.registerTask('build', 'coffee:compile min:head min:app clean:tmp compass:prod growl:build');
+  grunt.registerTask('build', 'coffee:compile min:head min:app clean:tmp compass-clean compass:prod growl:build');
 };
