@@ -20,12 +20,16 @@ the defaults.
 Boilerplizzle requires [node](http://nodejs.org/), [Compass](http://compass-style.org/install/) & [grunt](http://gruntjs.com/)
 (you probably already have them, but see [Installing Dependencies](#installing-dependencies) if you don't).
 
+1. [Download](https://github.com/bensmithett/boilerplizzle/zipball/master/) & unzip boilerplizzle.
+- `$ npm install` (you might need `sudo`)
+- `$ grunt`
 
-1. `bash <(curl -L https://raw.github.com/bensmithett/boilerplizzle/gimme)`
-  <br />That will ask you to name your new project's folder, then it will download boilerplizzle & set everything up.
-2. `grunt`
+Or if you're as lazy as me and think 3 steps is 2 too many...
+```bash
+bash <(curl -L https://raw.github.com/bensmithett/boilerplizzle/gimme)
+```
 
-A blank canvas awaits you at [localhost:8000](http://localhost:8000),
+That's it! A blank canvas awaits you at [localhost:8000](http://localhost:8000),
 so stop reading this right now & go do something awesome to `index.html`, `app.coffee` or `screen.sass`!
 
 ## TDD with Jasmine & Testem
