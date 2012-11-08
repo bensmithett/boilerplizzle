@@ -5,14 +5,14 @@ module.exports = function(grunt) {
   grunt.initConfig({
     concat: {
       head: {
-        src: ['public/js/vendor/modernizr*.js', 'tmp/load.js'],
+        src: ['app/js/vendor/modernizr*.js', 'tmp/load.js'],
         dest: 'public/js/head.js'
       }
     },
 
     min: {
       head: {
-        src: ['public/js/vendor/modernizr*.js', 'tmp/load.js'],
+        src: ['app/js/vendor/modernizr*.js', 'tmp/load.js'],
         dest: 'public/js/head.js'
       },
       app: {
@@ -23,11 +23,11 @@ module.exports = function(grunt) {
 
     watch: {
       coffee: {
-        files: ['coffee/**/*.coffee', 'spec/**/*.coffee'],
+        files: ['app/coffee/**/*.coffee', 'spec/**/*.coffee'],
         tasks: ['coffee:compile', 'concat:head', 'clean:tmp', 'growl:coffee']
       },
       compass: {
-        files: ['sass/**/*.sass'],
+        files: ['app/sass/**/*.sass'],
         tasks: ['compass:dev', 'growl:compass']
       }
     },
@@ -43,8 +43,8 @@ module.exports = function(grunt) {
     coffee: {
       compile: {
         files: {
-          'tmp/load.js': 'coffee/load.coffee',
-          'public/js/app.js': ['coffee/app.coffee'],
+          'tmp/load.js': 'app/coffee/load.coffee',
+          'public/js/app.js': ['app/coffee/app.coffee'],
           'spec/js/*.js': 'spec/**/*.coffee'
         }
       }
@@ -52,12 +52,16 @@ module.exports = function(grunt) {
 
     compass: {
       dev: {
-        environment: 'development',
-        config: 'compass.rb'
+        src: 'app/sass/screen.sass',
+        dest: 'public/css',
+        linecomments: true,
+        outputstyle: 'expanded'
       },
       prod: {
-        environment: 'production',
-        config: 'compass.rb'
+        src: 'app/sass/screen.sass',
+        dest: 'public/css',
+        outputstyle: 'compressed',
+        linecomments: false
       }
     },
 
@@ -82,10 +86,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-growl');
   grunt.loadNpmTasks('grunt-compass');
-  grunt.loadNpmTasks('grunt-requirejs');
+  grunt.loadNpmTasks('grunt-exec');
 
   // Default task.
-  grunt.registerTask('compile', 'coffee:compile concat:head clean:tmp growl:coffee compass:dev growl:compass');
   grunt.registerTask('default', 'compile server watch');
-  grunt.registerTask('build', 'coffee:compile min:head min:app clean:tmp compass-clean compass:prod growl:build');
+  grunt.registerTask('compile', 'coffee:compile concat:head clean:tmp growl:coffee compass:dev growl:compass');
+  grunt.registerTask('build', 'coffee:compile min:head min:app clean:tmp compass:prod growl:build');
 };
