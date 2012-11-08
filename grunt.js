@@ -29,6 +29,10 @@ module.exports = function(grunt) {
       compass: {
         files: ['app/sass/**/*.sass'],
         tasks: ['compass:dev', 'growl:compass']
+      },
+      html: {
+        files: ['app/**/*.html'],
+        tasks: ['exec:make_html_public', 'growl:html']
       }
     },
 
@@ -61,6 +65,12 @@ module.exports = function(grunt) {
       }
     },
 
+    exec: {
+      make_html_public: {
+        command: "mkdir -p public && rsync -av --include='*/' --include='*.html' --exclude='*' app/ public/"
+      }
+    },
+
     growl: {
       coffee: {
         title: 'CoffeeScript',
@@ -70,6 +80,10 @@ module.exports = function(grunt) {
         title: 'Compass',
         message: 'Compiled!'
       },
+      html: {
+        title: 'HTML',
+        message: 'HTML copied!'
+      },      
       build: {
         title: 'Build complete',
         message: 'The public/ folder is ready to deploy!'
