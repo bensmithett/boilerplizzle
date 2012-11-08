@@ -13,6 +13,5 @@
     "grunt-compass": "0.3.x",
     "grunt-exec": "0.3.x",
     "grunt-growl": "0.1.x",
-    "grunt-requirejs": "0.2.x"
   }
 }

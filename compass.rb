@@ -1,7 +1,7 @@
 preferred_syntax = :sass
 http_path = '/'
 css_dir = 'public/css'
-sass_dir = 'sass'
+sass_dir = 'app/sass'
 images_dir = 'public/img'
 javascripts_dir = 'public/js'
 relative_assets = true
