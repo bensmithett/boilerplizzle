@@ -69,10 +69,6 @@ module.exports = function(grunt) {
     exec: {
       copy_build: {
         command: "mkdir -p public && rsync -avm --include='*/' --exclude='*.coffee' --exclude='*.s[ac]ss' app/ public/"
-      },
-      gh_pages: {
-        command: "cp -r public/ ../temp && git checkout gh-pages && cp -r ../temp/* ./ && rm -r ../temp",
-        stdout: true
       }
     },
 
@@ -92,10 +88,6 @@ module.exports = function(grunt) {
       build: {
         title: 'Build complete',
         message: 'The public/ folder is ready to deploy!'
-      },
-      gh_pages: {
-        title: 'GitHub Pages',
-        message: 'Commit & push to publish to GitHub Pages!'
       }
     }
   });
@@ -111,5 +103,4 @@ module.exports = function(grunt) {
   grunt.registerTask('default', 'compile server watch');
   grunt.registerTask('compile', 'exec:copy_build coffee:compile concat:head clean:tmp growl:coffee compass:dev growl:compass');
   grunt.registerTask('build', 'clean:public exec:copy_build coffee:compile min:head min:app clean:tmp compass:prod growl:build');
-  grunt.registerTask('gh-pages', 'build exec:gh_pages growl:gh_pages');
 };
