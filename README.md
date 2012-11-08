@@ -30,7 +30,8 @@ bash <(curl -L https://raw.github.com/bensmithett/boilerplizzle/gimme)
 ```
 
 That's it! A blank canvas awaits you at [localhost:8000](http://localhost:8000),
-so stop reading this right now & go do something awesome to `index.html`, `app.coffee` or `screen.sass`!
+so stop reading this right now, dive into the `app/` folder & do something awesome to 
+`index.html`, `app.coffee` or `screen.sass`!
 
 ## TDD with Jasmine & Testem
 You can optionally write [Jasmine](http://pivotal.github.com/jasmine/) tests for your JS and 
