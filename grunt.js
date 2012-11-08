@@ -71,7 +71,7 @@ module.exports = function(grunt) {
         command: "mkdir -p public && rsync -avm --include='*/' --exclude='*.coffee' --exclude='*.s[ac]ss' app/ public/"
       },
       gh_pages: {
-        command: "cp -r public/ ../temp && git checkout gh-pages && cp -r ../temp/* ./ && rm -r ../temp && git add -A && git status",
+        command: "cp -r public/ ../temp && git checkout gh-pages && cp -r ../temp/* ./ && rm -r ../temp && rm -rf * && git status",
         stdout: true
       }
     },
