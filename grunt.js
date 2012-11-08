@@ -5,14 +5,14 @@ module.exports = function(grunt) {
   grunt.initConfig({
     concat: {
       head: {
-        src: ['public/js/vendor/modernizr*.js', 'tmp/load.js'],
+        src: ['app/js/vendor/modernizr*.js', 'tmp/load.js'],
         dest: 'public/js/head.js'
       }
     },
 
     min: {
       head: {
-        src: ['public/js/vendor/modernizr*.js', 'tmp/load.js'],
+        src: ['app/js/vendor/modernizr*.js', 'tmp/load.js'],
         dest: 'public/js/head.js'
       },
       app: {
@@ -23,17 +23,22 @@ module.exports = function(grunt) {
 
     watch: {
       coffee: {
-        files: ['coffee/**/*.coffee', 'spec/**/*.coffee'],
+        files: ['app/coffee/**/*.coffee', 'spec/**/*.coffee'],
         tasks: ['coffee:compile', 'concat:head', 'clean:tmp', 'growl:coffee']
       },
       compass: {
-        files: ['sass/**/*.sass'],
+        files: ['app/sass/**/*.sass'],
         tasks: ['compass:dev', 'growl:compass']
+      },
+      html: {
+        files: ['app/**/*.html'],
+        tasks: ['exec:copy_build', 'growl:html']
       }
     },
 
     clean: {
-      tmp: 'tmp/'
+      tmp: 'tmp/',
+      public: 'public/'
     },
     
     server: {
@@ -43,8 +48,8 @@ module.exports = function(grunt) {
     coffee: {
       compile: {
         files: {
-          'tmp/load.js': 'coffee/load.coffee',
-          'public/js/app.js': ['coffee/app.coffee'],
+          'tmp/load.js': 'app/coffee/load.coffee',
+          'public/js/app.js': ['app/coffee/app.coffee'],
           'spec/js/*.js': 'spec/**/*.coffee'
         }
       }
@@ -61,6 +66,12 @@ module.exports = function(grunt) {
       }
     },
 
+    exec: {
+      copy_build: {
+        command: "mkdir -p public && rsync -avm --include='*/' --exclude='*.coffee' --exclude='*.s[ac]ss' app/ public/"
+      }
+    },
+
     growl: {
       coffee: {
         title: 'CoffeeScript',
@@ -70,6 +81,10 @@ module.exports = function(grunt) {
         title: 'Compass',
         message: 'Compiled!'
       },
+      html: {
+        title: 'HTML',
+        message: 'HTML copied!'
+      },      
       build: {
         title: 'Build complete',
         message: 'The public/ folder is ready to deploy!'
@@ -79,13 +94,13 @@ module.exports = function(grunt) {
 
   // Load npm tasks
   grunt.loadNpmTasks('grunt-clean');
-  grunt.loadNpmTasks('grunt-contrib-coffee');
-  grunt.loadNpmTasks('grunt-growl');
   grunt.loadNpmTasks('grunt-compass');
-  grunt.loadNpmTasks('grunt-requirejs');
+  grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-exec');
+  grunt.loadNpmTasks('grunt-growl');
 
   // Default task.
-  grunt.registerTask('compile', 'coffee:compile concat:head clean:tmp growl:coffee compass:dev growl:compass');
   grunt.registerTask('default', 'compile server watch');
-  grunt.registerTask('build', 'coffee:compile min:head min:app clean:tmp compass-clean compass:prod growl:build');
+  grunt.registerTask('compile', 'exec:copy_build coffee:compile concat:head clean:tmp growl:coffee compass:dev growl:compass');
+  grunt.registerTask('build', 'clean:public exec:copy_build coffee:compile min:head min:app clean:tmp compass:prod growl:build');
 };
