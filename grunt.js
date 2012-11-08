@@ -32,12 +32,13 @@ module.exports = function(grunt) {
       },
       html: {
         files: ['app/**/*.html'],
-        tasks: ['exec:make_html_public', 'growl:html']
+        tasks: ['exec:copy_build', 'growl:html']
       }
     },
 
     clean: {
-      tmp: 'tmp/'
+      tmp: 'tmp/',
+      public: 'public/'
     },
     
     server: {
@@ -66,8 +67,8 @@ module.exports = function(grunt) {
     },
 
     exec: {
-      make_html_public: {
-        command: "mkdir -p public && rsync -av --include='*/' --include='*.html' --exclude='*' app/ public/"
+      copy_build: {
+        command: "mkdir -p public && rsync -avm --include='*/' --exclude='*.coffee' --exclude='*.s[ac]ss' app/ public/"
       }
     },
 
@@ -100,6 +101,6 @@ module.exports = function(grunt) {
 
   // Default task.
   grunt.registerTask('default', 'compile server watch');
-  grunt.registerTask('compile', 'coffee:compile concat:head clean:tmp growl:coffee compass:dev growl:compass');
-  grunt.registerTask('build', 'coffee:compile min:head min:app clean:tmp compass-clean compass:prod growl:build');
+  grunt.registerTask('compile', 'exec:copy_build coffee:compile concat:head clean:tmp growl:coffee compass:dev growl:compass');
+  grunt.registerTask('build', 'clean:public exec:copy_build coffee:compile min:head min:app clean:tmp compass:prod growl:build');
 };
