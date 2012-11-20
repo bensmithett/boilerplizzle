@@ -26,7 +26,7 @@ echo '
 
 read -p "Creating a folder for your new project, give it a name: " foldername
 
-read -p "This will download boilerplizzle into '"$foldername"', then run 'npm install'. That cool? [Yn] "
+read -p "This will download boilerplizzle into new folder '"$foldername"', then run 'bundle install' and 'npm install'. That cool? [Yn] "
 if [[ ! $REPLY =~ ^[Nn]$ ]]
 then
   curl -L -o tmp-boilerplizzle.zip https://github.com/bensmithett/boilerplizzle/zipball/master/
@@ -37,9 +37,9 @@ then
   bundle install
   npm install
   echo -e "\n\nDone! Your new project is set up in '"$foldername"'!\n\n"
-  echo -e "To get started:\n"
-  echo -e "cd "$foldername"\n"
-  echo -e "grunt\n"
+  echo -e "To get started:"
+  echo -e "cd "$foldername""
+  echo -e "grunt"
 else
   echo "Alrighty, see you next time then."
 fi
