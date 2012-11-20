@@ -36,10 +36,10 @@ then
   cd $foldername
   bundle install
   npm install
-  echo "\n\nDone! Your new project is set up in '"$foldername"'!\n\n"
-  echo "To get started:\n"
-  echo "cd "$foldername"\n"
-  echo "grunt\n"
+  echo -e "\n\nDone! Your new project is set up in '"$foldername"'!\n\n"
+  echo -e "To get started:\n"
+  echo -e "cd "$foldername"\n"
+  echo -e "grunt\n"
 else
   echo "Alrighty, see you next time then."
 fi
