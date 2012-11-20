@@ -34,9 +34,12 @@ then
   rm tmp-boilerplizzle.zip
   mv bensmithett-boilerplizzle* $foldername
   cd $foldername
+  bundle install
   npm install
-  echo "Your new project is set up in '"$foldername"'!"
-  echo "Get in there and run 'grunt' to fire up the server & Compass/Coffee compilation."
+  echo "\n\nDone! Your new project is set up in '"$foldername"'!\n\n"
+  echo "To get started:\n"
+  echo "cd "$foldername"\n"
+  echo "grunt\n"
 else
   echo "Alrighty, see you next time then."
 fi
