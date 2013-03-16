@@ -1,3 +1,5 @@
+***Important!*** **I'm halfway through updating boilerplizzle to work with Grunt 0.4 ([here's the branch](https://github.com/bensmithett/boilerplizzle/compare/update-for-grunt-0.4)). I'm taking the opportunity to refactor a few things as well, so if you use this as it stands beware that it won't be compatible with the new version.**
+
 # Boilerplizzle
 
 Boilerplizzle is a flexible starting point for small or experimental projects that gives you the tools 
