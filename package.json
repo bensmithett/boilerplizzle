@@ -16,8 +16,6 @@
     "grunt-contrib-compass": "0.1.x",
     "grunt-contrib-connect": "0.2.x",
     "grunt-contrib-clean": "0.4.x",
-    
-
-    "grunt-growl": "0.1.x"
+    "grunt-contrib-uglify": "0.2.x"
   }
 }

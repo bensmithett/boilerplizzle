@@ -56,14 +56,24 @@ module.exports = function(grunt) {
       public: 'public/'
     },
     parallel: {
-      server: [{
-        grunt: true,
-        args: ['connect']
-      },
-      {
-        grunt: true,
-        args: ['watch']
-      }]
+      server: [
+        {
+          grunt: true,
+          args: ['connect']
+        },
+        {
+          grunt: true,
+          args: ['watch']
+        }
+      ]
+    },
+    uglify: {
+      all: {
+        files: {
+          // TODO: Globbing: listing files manually here sucks.
+          'public/js/app.js': ['public/js/app.js']
+        }
+      }
     }
   });
 
@@ -75,10 +85,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  // Default task.
-  // grunt.registerTask('default', 'compile connect watch');
-  grunt.registerTask('default', ['compile', 'parallel:server']);
+  // Register tasks
   grunt.registerTask('compile', ['exec:copy_build', 'coffee:glob_to_multiple', 'clean:tmp', 'compass:dev']);
-  // grunt.registerTask('build', 'clean:public exec:copy_build coffee:compile min:head min:app clean:tmp compass:prod growl:build');
+  grunt.registerTask('build', ['clean:public', 'exec:copy_build', 'compile', 'uglify']);
+
+  // Default task
+  grunt.registerTask('default', ['compile', 'parallel:server']);
 };
