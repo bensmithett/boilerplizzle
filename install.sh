@@ -30,6 +30,7 @@ then
   curl -L -o tmp-boilerplizzle.zip https://github.com/bensmithett/boilerplizzle/zipball/master/
   unzip tmp-boilerplizzle.zip
   rm tmp-boilerplizzle.zip
+  mv bensmithett-boilerplizzle* .
   bundle install
   npm install
   echo -e "\n\nDone! Your new boilerplizzle project is ready to go!\n\n"
