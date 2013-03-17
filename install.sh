@@ -34,7 +34,7 @@ then
   rm tmp-boilerplizzle.zip
   mv bensmithett-boilerplizzle**/.[^.]* .
   mv bensmithett-boilerplizzle**/* .
-  rm -rf bensmithett-boilerplizzle-*
+  rm -r bensmithett-boilerplizzle-*
   bundle install
   npm install
   echo -e "\n\nDone! Your new boilerplizzle project is ready to go!\n\n"
