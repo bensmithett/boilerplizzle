@@ -9,9 +9,9 @@ module.exports = function(grunt) {
     coffee: {
       glob_to_multiple: {
         expand: true,
-        cwd: 'app/coffee/',
+        cwd: 'app/javascripts/',
         src: ['*.coffee'],
-        dest: 'public/js/',
+        dest: 'public/javascripts/',
         ext: '.js'
       }
     },
@@ -31,15 +31,15 @@ module.exports = function(grunt) {
     },
     watch: {
       coffee: {
-        files: 'app/coffee/**/*.coffee',
+        files: 'app/javascripts/**/*.coffee',
         tasks: ['coffee:glob_to_multiple']
       },
       compass: {
-        files: 'app/sass/**/*.sass',
+        files: 'app/stylesheets/**/*.sass',
         tasks: ['compass:dev']
       },
       everything_else: {
-        files: ['app/**/*', '!app/sass/**/*.sass', '!app/coffee/**/*.coffee'],
+        files: ['app/**/*', '!app/stylesheets/**/*.sass', '!app/javascripts/**/*.coffee'],
         tasks: ['exec:copy_build']
       }
     },
@@ -71,7 +71,7 @@ module.exports = function(grunt) {
       all: {
         files: {
           // TODO: Globbing: listing files manually here sucks.
-          'public/js/app.js': ['public/js/app.js']
+          'public/javascripts/app.js': ['public/javascripts/app.js']
         }
       }
     }
