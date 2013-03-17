@@ -2,66 +2,52 @@
 
 # Boilerplizzle
 
-Boilerplizzle is a flexible starting point for small or experimental projects that gives you the tools 
-you're used to from bigger projects then gets out of your way.
+A simple little tool for building static websites with [Compass](http://compass-style.org/) & [CoffeeScript](http://coffeescript.org/).
+
+Powered by [Grunt](http://gruntjs.com/).
 
 ## What you get
-- a local server
-- live [Compass](http://compass-style.org/) & [CoffeeScript](http://coffeescript.org/) compilation
+- A [static web server](https://github.com/gruntjs/grunt-contrib-connect)
 - [h5bp](http://html5boilerplate.com/)'s `index.html`
-- [jQuery](http://jquery.com/), [Modernizr](http://modernizr.com/) & [Lo-Dash](http://lodash.com/)
+- Sass & CoffeeScript compilation
+- [RequireJS](http://requirejs.org/)
+- [jQuery](http://jquery.com/) & [Modernizr](http://modernizr.com/)
 - [Normalize.css](http://necolas.github.com/normalize.css/)
-- [Jasmine](http://pivotal.github.com/jasmine/), [jasmine-jquery](https://github.com/velesin/jasmine-jquery) & [Testem](https://github.com/airportyh/testem)
 - A build task to gift wrap a minified, production-ready copy of your project.
 
-Boilerplizzle is designed to be customised. You can easily add more libraries & tools or delete the defaults.
+## Setup instructions
 
-## Super complicated installation instructions
+Boilerplizzle requires [Bundler](http://gembundler.com/#getting-started), [node](http://nodejs.org/) & [grunt](http://gruntjs.com/getting-started).
 
-Boilerplizzle requires [Bundler](http://gembundler.com/), [node](http://nodejs.org/) & [grunt](http://gruntjs.com/). 
+### Magical project setup script
 
-To start a new project, [download](https://github.com/bensmithett/boilerplizzle/zipball/master/) & unzip Boilerplizzle then…
-
-```
-$ bundle install
-$ npm install
-$ grunt
-```
-
-A blank canvas awaits at [localhost:8000](http://localhost:8000)!
-
-Dive into `app/` & do something awesome to 
-`index.html`, `app.coffee` or `screen.sass`.
-
-### Magical setup script
-
-Alternatively, if you like things to be easy & you trust me then you can just run this:
+Stick this in your terminal to setup a new project.
 
 ```
 bash <(curl -L https://raw.github.com/bensmithett/boilerplizzle/gimme)
 ```
 
-You might like to alias something sensible like`bp` to the
-[contents of that bash script](https://raw.github.com/bensmithett/boilerplizzle/gimme)
-in your terminal for extra speedy new project setup.
+### Slightly less magical setup steps
 
+[Download](https://github.com/bensmithett/boilerplizzle/zipball/master/) & unzip Boilerplizzle, then...
 
-## TDD with Jasmine & Testem
-You can optionally write [Jasmine](http://pivotal.github.com/jasmine/) tests for your JS and 
-run them everywhere with the awesome [Testem](https://github.com/airportyh/testem).
+```
+bundle install
+npm install
+grunt
+```
 
-If you don't already have them, install Testem & PhantomJS:
+A blank canvas awaits at `localhost:8000`! Dive into `app/` & do something awesome to `index.html`, `app.coffee` or `screen.sass`.
 
-- `npm install -g testem`
-- `brew install phantomjs` if you have homebrew, or just download the [installer](http://phantomjs.org/download.html)
+## Grunt tasks
 
-Then…
+- `grunt` (default task): Start a server at `localhost:8000`. Sass & CoffeeScript files will be compiled automatically when you make changes.
 
-- `grunt`
-- In a new terminal window, `testem`
-- Write your specs in CoffeeScript in the `spec` directory, save & watch the magic happen.
+- `grunt build`: Compile Sass & CoffeeScript files and minify `app.js`. The `public/` folder is ready to deploy.
 
-## Building for production
-`grunt build` compiles, concatenates & minifies. When it's done, `public/` is ready to ship to the information superhighway.
+  **You should replace the full development version of Modernizr with a [custom production build](http://modernizr.com/download/) before deploying.**
 
-`grunt compile` compiles everything in dev mode and makes `public/` development-y again.
+- `grunt compile`: Compile Sass & CoffeeScript.
+
+## Need more?
+If you're building anything more than a simple, small-ish static site you might need a bit more firepower. Use [Middleman](http://middlemanapp.com/).
