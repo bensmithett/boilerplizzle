@@ -24,13 +24,17 @@ echo '
  /            "-._.-"                    : 
 '
 
-read -p "This will download the boilerplizzle project boilerplate into this folder, then run 'bundle install' and 'npm install'. That cool? [Yn] "
+read -p "This will download the Boilerplizzle project boilerplate into this folder, then run 'bundle install' and 'npm install'. That cool? [Yn] "
 if [[ ! $REPLY =~ ^[Nn]$ ]]
 then
+  echo -e "\n\nDownloading Boilerplizzle...\n\n"
   curl -L -o tmp-boilerplizzle.zip https://github.com/bensmithett/boilerplizzle/zipball/master/
+  echo -e "\n\nUnzipping Boilerplizzle...\n\n"
   unzip tmp-boilerplizzle.zip
   rm tmp-boilerplizzle.zip
-  mv bensmithett-boilerplizzle* .
+  mv bensmithett-boilerplizzle**/.[^.]* .
+  mv bensmithett-boilerplizzle**/* .
+  rm -rf bensmithett-boilerplizzle-*
   bundle install
   npm install
   echo -e "\n\nDone! Your new boilerplizzle project is ready to go!\n\n"
