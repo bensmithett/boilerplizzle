@@ -13,13 +13,13 @@ Powered by [Grunt](http://gruntjs.com/).
 - [Normalize.css](http://necolas.github.com/normalize.css/)
 - A build task to gift wrap a minified, production-ready copy of your project.
 
-## Super complicated installation instructions
+## Setup instructions
 
-Boilerplizzle requires [Bundler](http://gembundler.com/#getting-started), [node](http://nodejs.org/) & [grunt](http://gruntjs.com/getting-started). 
+Boilerplizzle requires [Bundler](http://gembundler.com/#getting-started), [node](http://nodejs.org/) & [grunt](http://gruntjs.com/getting-started).
 
 ### Magical project setup script
 
-Stick this in your terminal to setup a new Boilerplizzle project.
+Stick this in your terminal to setup a new project.
 
 ```
 bash <(curl -L https://raw.github.com/bensmithett/boilerplizzle/gimme)
@@ -30,15 +30,12 @@ bash <(curl -L https://raw.github.com/bensmithett/boilerplizzle/gimme)
 [Download](https://github.com/bensmithett/boilerplizzle/zipball/master/) & unzip Boilerplizzle, then...
 
 ```
-$ bundle install
-$ npm install
-$ grunt
+bundle install
+npm install
+grunt
 ```
 
-A blank canvas awaits at [localhost:8000](http://localhost:8000)!
-
-Dive into `app/` & do something awesome to 
-`index.html`, `app.coffee` or `screen.sass`.
+A blank canvas awaits at `localhost:8000`! Dive into `app/` & do something awesome to `index.html`, `app.coffee` or `screen.sass`.
 
 ## Grunt tasks
 
