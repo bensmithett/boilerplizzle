@@ -49,3 +49,6 @@ A blank canvas awaits at `localhost:8000`! Dive into `app/` & do something aweso
 
 ## Need more?
 If you're building anything more than a simple, small-ish static site you might need a bit more firepower. Use [Middleman](http://middlemanapp.com/).
+
+## License
+Boilerplizzle is released under the [MIT License](http://ben.mit-license.org/).
