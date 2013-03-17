@@ -10,7 +10,7 @@ module.exports = function(grunt) {
       glob_to_multiple: {
         expand: true,
         cwd: 'app/javascripts/',
-        src: ['*.coffee'],
+        src: ['**/*.coffee'],
         dest: 'public/javascripts/',
         ext: '.js'
       }
@@ -92,5 +92,5 @@ module.exports = function(grunt) {
   grunt.registerTask('build', ['clean:public', 'exec:copy_build', 'compile', 'uglify']);
 
   // Default task
-  grunt.registerTask('default', ['compile', 'parallel:server']);
+  grunt.registerTask('default', ['clean:public', 'compile', 'parallel:server']);
 };
