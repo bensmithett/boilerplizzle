@@ -25,6 +25,8 @@ Run this inside your new empty project folder:
 bash <(curl -L https://raw.github.com/bensmithett/boilerplizzle/gimme)
 ```
 
+*You should [read the source](https://raw.github.com/bensmithett/boilerplizzle/gimme) to see what this does before trusting my bash scripting skills.*
+
 ### Slightly less magical setup steps
 
 [Download](https://github.com/bensmithett/boilerplizzle/zipball/master/) & unzip of Boilerplizzle somewhere sensible, then...
