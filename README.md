@@ -1,5 +1,3 @@
-***Important!*** **I'm halfway through updating boilerplizzle to work with Grunt 0.4 ([here's the branch](https://github.com/bensmithett/boilerplizzle/compare/update-for-grunt-0.4)). I'm taking the opportunity to refactor a few things as well, so if you use this as it stands beware that it won't be compatible with the new version.**
-
 # Boilerplizzle
 
 A simple little tool for building static websites with [Compass](http://compass-style.org/) & [CoffeeScript](http://coffeescript.org/).
@@ -21,7 +19,7 @@ Boilerplizzle requires [Bundler](http://gembundler.com/#getting-started), [node]
 
 ### Magical project setup script
 
-Stick this in your terminal to setup a new project.
+Run this inside your new empty project folder:
 
 ```
 bash <(curl -L https://raw.github.com/bensmithett/boilerplizzle/gimme)
@@ -29,7 +27,7 @@ bash <(curl -L https://raw.github.com/bensmithett/boilerplizzle/gimme)
 
 ### Slightly less magical setup steps
 
-[Download](https://github.com/bensmithett/boilerplizzle/zipball/master/) & unzip Boilerplizzle, then...
+[Download](https://github.com/bensmithett/boilerplizzle/zipball/master/) & unzip of Boilerplizzle somewhere sensible, then...
 
 ```
 bundle install
